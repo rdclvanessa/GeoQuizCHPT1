@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -51,7 +52,7 @@ public class QuizActivity extends AppCompatActivity {
         mTrueButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v){
-                //toast.setGravity(Gravity.TOP,0,0);
+                //Toast.setGravity(Gravity.TOP,0,0);
                 checkAnswer(true);
             }
 
@@ -163,9 +164,10 @@ public class QuizActivity extends AppCompatActivity {
                 messageResId = R.string.incorrect_toast;
             }
         }
-        Toast.makeText(this, messageResId, Toast.LENGTH_SHORT).show();
 
-
+        Toast toast = Toast.makeText(this, messageResId, Toast.LENGTH_SHORT);
+                toast.setGravity(Gravity.TOP, 0, 0);
+                toast.show();
 
     }
 
