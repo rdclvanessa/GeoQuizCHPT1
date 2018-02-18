@@ -21,6 +21,7 @@ public class QuizActivity extends AppCompatActivity {
     private Button mTrueButton;
     private Button mFalseButton;
     private Button mNextButton;
+    private Button mPreviousButton;
     private Button mCheatButton;
     private TextView mQuestionTextView;
 
@@ -78,6 +79,15 @@ public class QuizActivity extends AppCompatActivity {
             updateQuestion();
             }
         });
+
+//        mPreviousButton = (Button) findViewById(R.id.previous_button);
+//        mPreviousButton.setOnClickListener(new View.onClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                mCurrentIndex = (mCurrentIndex - 1) % mQuestionBank.length;
+//            }
+//            updateQuestion();
+//        });
 
         mCheatButton = (Button) findViewById(R.id.cheat_button);
         mCheatButton.setOnClickListener(new View.OnClickListener() {
